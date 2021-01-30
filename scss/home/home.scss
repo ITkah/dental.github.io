@@ -1,6 +1,9 @@
 .main_section {
     position: relative;
-    height: 450px;
+    height: 500px;
+    @media (max-width: 990px) {
+        height: 450px;
+    }
     &::before {
         content: '';
         background: rgba(0, 0, 0, .4);

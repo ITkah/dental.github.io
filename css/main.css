@@ -335,9 +335,115 @@
   .contact_wrap .contact_text {
     font: 400 .95rem 'Hind Siliguri', sans-serif; }
 
+.history_wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 40px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  @media (max-width: 990px) {
+    .history_wrap {
+      grid-template-columns: 1fr;
+      grid-gap: 25px; } }
+  .history_wrap img {
+    max-width: 100%;
+    height: auto;
+    -o-object-fit: cover;
+       object-fit: cover; }
+  .history_wrap .history_title {
+    font: bold 2rem/1 'Hind Siliguri', sans-serif;
+    margin-bottom: 10px; }
+    @media (max-width: 990px) {
+      .history_wrap .history_title {
+        font: bold 1.25rem/1 'Hind Siliguri', sans-serif; } }
+  .history_wrap .history_text {
+    font: 400 .9rem/23px 'Hind Siliguri', sans-serif; }
+
+.about_price {
+  position: relative; }
+  .about_price .container {
+    padding: 55px 0;
+    position: relative;
+    z-index: 9; }
+    @media (max-width: 990px) {
+      .about_price .container {
+        padding: 35px 0; } }
+  .about_price .about_price_img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    -o-object-fit: cover;
+       object-fit: cover; }
+  .about_price::before {
+    content: '';
+    background: rgba(55, 197, 166, 0.3);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    height: 100%;
+    z-index: 9;
+    width: 100%; }
+  .about_price .about_price_wrap {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .about_price .about_price_wrap .about_price_title {
+      font: bold 2rem/1 'Hind Siliguri', sans-serif;
+      color: #fff;
+      margin-bottom: 15px; }
+      @media (max-width: 990px) {
+        .about_price .about_price_wrap .about_price_title {
+          font: bold 1.25rem/1 'Hind Siliguri', sans-serif; } }
+    .about_price .about_price_wrap .about_price_text {
+      font: 600 1.5rem/1 'Hind Siliguri', sans-serif;
+      color: #fff;
+      margin-bottom: 15px; }
+      @media (max-width: 990px) {
+        .about_price .about_price_wrap .about_price_text {
+          font: 600 1.125rem/1 'Hind Siliguri', sans-serif; } }
+    .about_price .about_price_wrap .about_price_btn {
+      background: #37c5a6;
+      display: inline-block;
+      border-radius: 25px;
+      padding: 10px 25px;
+      color: #fff;
+      font: 400 1rem 'Hind Siliguri', sans-serif; }
+      @media (max-width: 576px) {
+        .about_price .about_price_wrap .about_price_btn {
+          width: 100%;
+          -webkit-box-sizing: border-box;
+                  box-sizing: border-box;
+          display: block;
+          text-align: center; } }
+
 .main_section {
   position: relative;
-  height: 450px; }
+  height: 500px; }
+  @media (max-width: 990px) {
+    .main_section {
+      height: 450px; } }
   .main_section::before {
     content: '';
     background: rgba(0, 0, 0, 0.4);
@@ -826,6 +932,65 @@
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     height: 350px; }
+
+.product_wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 20px; }
+  @media (max-width: 990px) {
+    .product_wrap {
+      grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 768px) {
+    .product_wrap {
+      grid-template-columns: 1fr; } }
+  .product_wrap .product_box {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    cursor: pointer; }
+    .product_wrap .product_box:hover::before {
+      opacity: 1; }
+    .product_wrap .product_box:hover p {
+      opacity: 1; }
+    .product_wrap .product_box::before {
+      content: '';
+      background: rgba(55, 197, 166, 0.3);
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      height: 100%;
+      z-index: 9;
+      width: 100%;
+      opacity: 0;
+      -webkit-transition: .3s;
+      -o-transition: .3s;
+      transition: .3s; }
+    .product_wrap .product_box p {
+      position: absolute;
+      color: #fff;
+      font: 600 1.25rem 'Hind Siliguri', sans-serif;
+      z-index: 9;
+      opacity: 0;
+      -webkit-transition: .3s;
+      -o-transition: .3s;
+      transition: .3s; }
+    .product_wrap .product_box img {
+      max-width: 100%;
+      height: auto;
+      -o-object-fit: cover;
+         object-fit: cover; }
 
 .breadcrumbs {
   background: #43b2d2;
